@@ -1,0 +1,22 @@
+{
+  "name": "utility/fizzbuzz",
+  "description": "Package to solve the exercise about Fizz Buzz",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Utility Team",
+      "email": "amed.ibanez@trueforce.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.8.14"
+  },
+  "autoload": {
+    "psr-4": {
+      "Utility\\FizzBuzz\\": "src/Utility/FizzBuzz"
+    }
+  }
+}
