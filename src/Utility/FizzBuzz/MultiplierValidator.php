@@ -28,9 +28,9 @@ class MultiplierValidator implements ValidatorInterface
         foreach ($this->multipliers as $mult => $value) {
             if ($num % $mult == 0) {
                 return $value;
-            } else {
-                return false;
             }
         }
+
+        return false;
     }
 }

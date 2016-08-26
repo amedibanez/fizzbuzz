@@ -20,9 +20,15 @@ class ElementsContainer
         $this->end = $end;
         $this->multiplierValidator = $mV;
         $this->elementsList = [];
+        $this->fillList();
     }
 
-    public function fillList()
+    public function getList()
+    {
+        return $this->elementsList;
+    }
+
+    private function fillList()
     {
         for ($i = $this->start; $i <= $this->end; $i++) {
             $value = $this->multiplierValidator->validateNumberModMultiplier($i);
@@ -33,11 +39,6 @@ class ElementsContainer
                 $this->addElement(new Number($i));
             }
         }
-    }
-
-    public function getList()
-    {
-        return $this->elementsList;
     }
 
     private function addElement(FizzBuzzElementInterface $el)

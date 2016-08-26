@@ -17,10 +17,17 @@ class FizzBuzzFactory
         $this->multipliers = $multipliers;
     }
 
-    public function createFizzBuzzPrinter()
+    /**
+     * @param $startRange
+     * @param $endRange
+     *
+     * @return FizzBuzzPrinter
+     */
+    public function createFizzBuzzPrinter($startRange, $endRange)
     {
         $multValidator = new MultiplierValidator($this->multipliers);
-        $elementsContainer = new ElementsContainer($multValidator);
+        $elementsContainer = new ElementsContainer($startRange, $endRange, $multValidator);
+
         return new FizzBuzzPrinter($elementsContainer);
     }
 }
