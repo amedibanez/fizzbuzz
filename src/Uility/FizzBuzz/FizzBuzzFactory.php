@@ -1,12 +1,26 @@
 <?php
 
+namespace Utility\FizzBuzz;
+
 /**
- * Created by PhpStorm.
- * User: Amed
- * Date: 8/25/16
- * Time: 7:50 PM
+ * Responsible to create an instance of
  */
 class FizzBuzzFactory
 {
+    /**
+     * @var mixed[]
+     */
+    private $multipliers;
 
+    public function __construct($multipliers)
+    {
+        $this->multipliers = $multipliers;
+    }
+
+    public function createFizzBuzzPrinter()
+    {
+        $multValidator = new MultiplierValidator($this->multipliers);
+        $elementsContainer = new ElementsContainer($multValidator);
+        return new FizzBuzzPrinter($elementsContainer);
+    }
 }
