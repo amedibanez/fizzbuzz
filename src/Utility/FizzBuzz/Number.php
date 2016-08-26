@@ -3,20 +3,20 @@
 namespace Utility\FizzBuzz;
 
 
-class Text implements FizzBuzzElement
+class Number implements FizzBuzzElementInterface
 {
     /**
-     * @var string
+     * @var int
      */
-    private $value;
+    private $number;
 
     public function __construct($value)
     {
-        $this->value = $value;
+        $this->number = $value;
     }
 
     public function printValue()
     {
-        return $this->value;
+        return $this->number;
     }
 }
