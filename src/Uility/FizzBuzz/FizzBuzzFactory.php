@@ -20,7 +20,7 @@ class FizzBuzzFactory
     public function createFizzBuzzPrinter()
     {
         $multValidator = new MultiplierValidator($this->multipliers);
-        $elementsContainer = new ElementsContainer($multValidator);
+        $elementsContainer = new ElementsContainer(1, 100, $multValidator);
         return new FizzBuzzPrinter($elementsContainer);
     }
 }

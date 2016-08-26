@@ -3,7 +3,7 @@
 namespace Utility\FizzBuzz;
 
 
-class Number implements FizzBuzzElement
+class Number implements FizzBuzzElementInterface
 {
     /**
      * @var int

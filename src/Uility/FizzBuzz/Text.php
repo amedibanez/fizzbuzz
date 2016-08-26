@@ -3,7 +3,7 @@
 namespace Utility\FizzBuzz;
 
 
-class Text implements FizzBuzzElement
+class Text implements FizzBuzzElementInterface
 {
     /**
      * @var string
